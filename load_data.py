@@ -73,5 +73,11 @@ def main():
     print("Inflation rows:", len(inflation))
     print("Interest rate rows:", len(rates))
 
+    print("Inflation columns:", list(inflation.columns))
+    print(inflation.head(5).to_string(index=False))
+
+    print("Rates columns:", list(rates.columns))
+    print(rates.head(5).to_string(index=False))
+
 if __name__ == "__main__":
     main()
