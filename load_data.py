@@ -2,12 +2,15 @@ import pandas as pd
 from pathlib import Path
 from sqlalchemy import create_engine
 
-# ====== BREYTTU ÞESSU ======
-SERVER = "hopverkefni1.database.windows.net"
-DATABASE = "hopverkefni1"
-USERNAME = "sqladmin"
-PASSWORD = "EmblaogHafdisogSolla!"
-DRIVER = "ODBC+Driver+18+for+SQL+Server"
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+SERVER = os.getenv("AZ_SERVER")
+DATABASE = os.getenv("AZ_DATABASE")
+USERNAME = os.getenv("AZ_USERNAME")
+PASSWORD = os.getenv("AZ_PASSWORD")
+DRIVER = os.getenv("AZ_DRIVER", "ODBC+Driver+18+for+SQL+Server")
 
 # ==========================
 
